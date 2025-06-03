@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Laboratorio JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="top-bar">
+        <div class="avatar-container">
+            <span id="avatarEmoji" class="avatar">😃</span>
+        </div>
+        <!-- Quitar score-timer y puntaje -->
+        <button id="toggleTheme" title="Cambiar modo claro/oscuro">🌙</button>
+    </div>
+    <div class="progress-bar-container">
+        <div id="progressBar" class="progress-bar"></div>
+    </div>
+    <div id="modalFelicidades" class="modal-felicidades" style="display:none;">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModalFelicidades">&times;</span>
+            <h2>¡Felicidades! 🎉</h2>
+            <p>¡Has completado un reto importante!</p>
+        </div>
+    </div>
+    <div id="modalCero" class="modal-felicidades" style="display:none;">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModalCero">&times;</span>
+            <h2>¡Ánimo! 💡</h2>
+            <p>Sigue intentándolo, cada error es una oportunidad para aprender.</p>
+        </div>
+    </div>
+    <div id="modalExperto" class="modal-felicidades" style="display:none;">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModalExperto">&times;</span>
+            <h2>¡Eres un experto! 🏆</h2>
+            <p>¡Lograste superar cada reto correctamente!<br>¡Felicidades, eres un crack en JavaScript!</p>
+        </div>
+    </div>
+    <div id="modalCerca" class="modal-felicidades" style="display:none;">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModalCerca">&times;</span>
+            <h2>¡Estuviste cerca! 🚩</h2>
+            <p id="mensajeCerca">Te faltó acertar en algunos retos.<br></p>
+        </div>
+    </div>
+
+    <div id="helpCircle" class="help-circle" title="Ver instrucciones">❔</div>
+    <div id="modalInstrucciones" class="modal-felicidades" style="display:none;">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModalInstrucciones">&times;</span>
+            <h2>¿Cómo funciona?</h2>
+            <ul style="text-align:left;max-width:400px;margin:0 auto;">
+                <li>Resuelve cada reto interactivo de JavaScript.</li>
+                <li>Si completas todos los retos correctamente, ¡serás reconocido como experto!</li>
+                <li>Si completas todos pero fallas alguno, verás en qué fallaste y cómo mejorar.</li>
+                <li>Si tienes errores, recibirás un mensaje de ánimo.</li>
+                <li>Usa el botón de la luna/sol para cambiar entre modo claro y oscuro.</li>
+                <li>Haz clic en este círculo <b>❔</b> para volver a ver estas instrucciones. Puedes arrastrarlo a donde quieras.</li>
+            </ul>
+        </div>
+    </div>
+
+    <h1>Laboratorio JavaScript</h1>
+
+    <section>
+        <h2>Ejercicio 1: Palíndromo</h2>
+        <input type="text" id="palindromoInput" placeholder="Ingresa una palabra">
+        <button onclick="verificarPalindromo()">Verificar</button>
+        <p id="resultadoPalindromo"></p>
+    </section>
+
+    <section>
+        <h2>Ejercicio 2: Comparar números</h2>
+        <input type="number" id="numero1" placeholder="Número 1">
+        <input type="number" id="numero2" placeholder="Número 2">
+        <button onclick="compararNumeros()">Comparar</button>
+        <p id="resultadoComparacion"></p>
+    </section>
+
+    <section>
+        <h2>Ejercicio 3: Vocales en frase</h2>
+        <input type="text" id="fraseVocales" placeholder="Ingresa una frase">
+        <button onclick="extraerVocales()">Extraer vocales</button>
+        <p id="resultadoVocales"></p>
+    </section>
+
+    <section>
+        <h2>Ejercicio 4: Conteo de vocales</h2>
+        <input type="text" id="fraseConteo" placeholder="Ingresa una frase">
+        <button onclick="contarVocales()">Contar vocales</button>
+        <pre id="resultadoConteo"></pre>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
